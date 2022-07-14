@@ -1,0 +1,17 @@
+.logo {
+  padding: 1.2rem 0;
+  font-family: $stheiti;
+  font-size: 2rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.65px;
+
+  &__link {
+    color: $aqua;
+    transition: color .2s linear;
+
+    &:hover {
+      color: $aqua-light;
+    }
+  }
+}

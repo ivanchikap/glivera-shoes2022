@@ -1,0 +1,22 @@
+.nav {
+  max-width: 80%;
+  display: flex;
+
+  &__item {
+    padding: 2.2rem 2.1rem;
+    font-size: 1.6rem;
+    line-height: 1;
+    letter-spacing: 0.4px;
+    box-shadow: inset 1px 0 0 #eeeeee;
+    transition: color .2s linear;
+    @extend .text-overflow;
+
+    &:last-child {
+      box-shadow: 1px 0 0 #eeeeee, inset 1px 0 0 #eeeeee;
+    }
+
+    &:hover {
+      color: $aqua;
+    }
+  }
+}

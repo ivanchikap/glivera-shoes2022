@@ -1,10 +1,122 @@
 .header {
+  $root: &;
 
   &__top {
-    position: relative;
-    z-index: 4;
-    background-color: #999;
-    padding: 0.5rem;
-    min-height: 4rem;
+    height: 4.5rem;
+    background-color: $black;
+  }
+
+  &__top-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__buttons {
+    align-self: stretch;
+  }
+
+  &__button {
+    height: 100%;
+    background-color: transparent;
+    text-align: center;
+    font-size: 1.1rem;
+    fill: #7e7e7e;
+    color: #7e7e7e;
+    vertical-align: middle;
+    padding: 1.4rem 2rem;
+
+    @include mobile {
+      padding: 1.4rem;
+    }
+
+    &:last-child {
+      box-shadow: 1px 0 0 rgba(255, 255, 255, 0.35), inset 1px 0 0 rgba(255, 255, 255, 0.35);
+    }
+
+    * {
+      transition: color .2s linear, fill .1s linear;
+    }
+
+    &:hover {
+      * {
+        color: $white;
+        fill: $white;
+      }
+    }
+  }
+
+  &__button-upper {
+    text-transform: uppercase;
+  }
+  
+  &__menu {
+    background-color: $white;
+    height: 6rem;
+  }
+
+  &__menu-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__actions {
+    display: flex;
+  }
+
+  &__actions-item {
+    display: flex;
+    align-items: center;
+    padding: 2.2rem 2.1rem;
+    font-family: $aller-bold;
+    line-height: 1.6rem;
+    box-shadow: inset 1px 0 0 #eeeeee;
+    transition: color .2s linear;
+
+    &:last-child {
+      box-shadow: 1px 0 0 #eeeeee, inset 1px 0 0 #eeeeee;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 1.6rem;
+      height: 1.6rem;
+      margin-right: .6rem;
+    }
+
+    &--cart {
+      #{$root}__actions-item-value {
+        background-color: $aqua;
+      }
+
+      &::before {
+        background: url("../images/cart-icon.svg") no-repeat center / contain;
+      }
+    }
+
+    &--favourite {
+      #{$root}__actions-item-value {
+        background-color: #adadad;
+      }
+
+      &::before {
+        background: url("../images/start-icon.svg") no-repeat center / contain;
+      }
+    }
+
+    &:hover {
+
+    }
+  }
+
+  &__actions-item-value {
+    display: block;
+    font-size: 1rem;
+    line-height: 2rem;
+    color: $white;
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 4px;
   }
 }
