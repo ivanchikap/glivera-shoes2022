@@ -151,10 +151,10 @@ function js(cb) {
             }
         }))
         .pipe(webpackStream({
-          mode: "production",
-          output: {
-            filename: 'app.js',
-          }
+            mode: "production",
+            output: {
+                filename: 'app.js',
+            }
         }))
         .pipe(dest(path.build.js))
         .pipe(browserSync.reload({stream: true}));
@@ -174,10 +174,10 @@ function jsWatch(cb) {
             }
         }))
         .pipe(webpackStream({
-          mode: "development",
-          output: {
-            filename: 'app.js',
-          }
+            mode: "development",
+            output: {
+                filename: 'app.js',
+            }
         }))
         .pipe(dest(path.build.js))
         .pipe(browserSync.reload({stream: true}));

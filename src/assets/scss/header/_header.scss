@@ -2,17 +2,43 @@
   $root: &;
 
   &__top {
+    position: relative;
     height: 4.5rem;
     background-color: $black;
+
+    @include tablet {
+      padding-left: 3rem;
+    }
   }
 
   &__top-inner {
     display: flex;
     justify-content: space-between;
+
+    @include mobile {
+      justify-content: flex-end;
+    }
   }
 
   &__buttons {
     align-self: stretch;
+
+    @include mobile {
+      display: none;
+    }
+
+    &--mobile {
+      display: block;
+      #{$root} {
+        &__button {
+          font-size: 1.6rem;
+          &:last-child {
+            box-shadow: none;
+            padding-left: 0;
+          }
+        }
+      }
+    }
   }
 
   &__button {
@@ -52,6 +78,10 @@
   &__menu {
     background-color: $white;
     height: 6rem;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__menu-inner {
@@ -61,16 +91,39 @@
 
   &__actions {
     display: flex;
+    margin-left: auto;
+
+    &--mobile {
+      width: 100%;
+      #{$root} {
+        &__actions-item {
+          box-shadow: none;
+          padding-left: 0;
+
+          &:last-child {
+            box-shadow: none;
+          }
+        }
+      }
+    }
   }
 
   &__actions-item {
     display: flex;
     align-items: center;
-    padding: 2.2rem 2.1rem;
+    padding: 2rem 2.1rem;
     font-family: $aller-bold;
     line-height: 1.6rem;
     box-shadow: inset 1px 0 0 #eeeeee;
     transition: color .2s linear;
+
+    &:hover {
+      #{$root} {
+        &__actions-item-value {
+          background-color: $aqua;
+        }
+      }
+    }
 
     &:last-child {
       box-shadow: 1px 0 0 #eeeeee, inset 1px 0 0 #eeeeee;
@@ -85,27 +138,15 @@
     }
 
     &--cart {
-      #{$root}__actions-item-value {
-        background-color: $aqua;
-      }
-
       &::before {
         background: url("../images/cart-icon.svg") no-repeat center / contain;
       }
     }
 
     &--favourite {
-      #{$root}__actions-item-value {
-        background-color: #adadad;
-      }
-
       &::before {
         background: url("../images/start-icon.svg") no-repeat center / contain;
       }
-    }
-
-    &:hover {
-
     }
   }
 
@@ -115,8 +156,10 @@
     line-height: 2rem;
     color: $white;
     text-align: center;
+    background-color: #adadad;
     width: 2rem;
     height: 2rem;
     border-radius: 4px;
+    transition:  background-color .2s linear;
   }
 }

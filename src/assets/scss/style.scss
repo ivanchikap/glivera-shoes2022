@@ -4,10 +4,16 @@
 @import "extends";
 @import "reset";
 @import "fontawesome";
-@import "grid";
 @import "base";
+@import "animation";
 
 
 @import "default-elements/all";
 
 @import "header/all";
+@import "tabs/all";
+
+
+@import "specials/specials";
+@import "blog/all";
+@import "pre-footer/pre-footer";

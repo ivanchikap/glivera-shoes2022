@@ -1,0 +1,16 @@
+.price {
+  width: 6.8rem;
+  height: 6.8rem;
+  background-color: $aqua;
+
+  color: $white;
+  font-family: $aller-bold;
+  font-size: 1.3rem;
+  text-align: center;
+  line-height: 6.8rem;
+  @extend .text-overflow;
+  
+  &__amount {
+    padding: .8rem;
+  }
+}

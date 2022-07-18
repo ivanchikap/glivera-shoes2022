@@ -1,0 +1,21 @@
+.section {
+
+  &--best-sellers {
+    padding: 0.7rem 0 4.6rem 0;
+    border-bottom: 1px solid #bcb5a7;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.8rem 0;
+  }
+
+  &__title {
+    color: $black;
+    font-family: $aller-light;
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+}

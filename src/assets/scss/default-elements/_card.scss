@@ -1,0 +1,99 @@
+.card {
+  $root: &;
+  position: relative;
+  background-color: $white;
+
+  &::after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6.8rem;
+    height: 6.8rem;
+    padding: 0.4rem;
+    background-color: $black;
+    position: absolute;
+    top: 0;
+    right: 1.3rem;
+
+
+    color: $white;
+    font-family: $aller-bold;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+
+  &--sale {
+    &::after {
+      content: "on sale!";
+      background-color: $black;
+    }
+  }
+
+  &--out-of-stock {
+    &::after {
+      content: "Out Of Stock";
+      background-color: $orange;
+    }
+  }
+
+
+  &__img {
+    width: 100%;
+    height: 22rem;
+
+    img {
+      @extend .img-cover;
+    }
+  }
+
+  &__info {
+    position: relative;
+    padding: 0 1.6rem 0 9.3rem;
+    box-shadow: inset 0 1px 0 #cccccc;
+    cursor: pointer;
+
+    &:hover {
+      #{$root} {
+        &__name {
+          opacity: 0;
+          z-index: 1;
+        }
+      }
+      .labels {
+        opacity: 1;
+        z-index: 3;
+      }
+    }
+  }
+
+  &__name {
+    position: relative;
+    z-index: 3;
+    color: $black;
+    font-size: 1.8rem;
+    line-height: 5.6rem;
+    letter-spacing: 0.45px;
+    @extend .text-overflow;
+    transition: opacity .3s ease-in;
+  }
+
+  .price {
+    position: absolute;
+    bottom: 0;
+    left: 1.2rem;
+  }
+
+  .labels {
+    position: absolute;
+    left: calc( 50% + 3.8rem );
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    margin-top: 0;
+    opacity: 0;
+    transition: opacity .6s ease-out;
+  }
+}

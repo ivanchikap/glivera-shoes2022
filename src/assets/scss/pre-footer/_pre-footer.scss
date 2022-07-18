@@ -1,0 +1,100 @@
+.pre-footer {
+  $root: &;
+  padding: 2rem 0 0.7rem 0;
+  background-color: $black;
+
+  &__top {
+    padding: 3rem 0;
+    color: #a4a4a4;
+    font-family: $aller-italic;
+    font-size: 1.2rem;
+  }
+
+  &__bottom {
+    padding: 3.7rem 0;
+    border-top: 1px solid #1c1c1c;
+
+    @include mobile-large {
+      padding: 3rem 0;
+    }
+    @include mobile {
+      padding: 2.2rem 0;
+    }
+  }
+
+  &__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__form-wrapper {
+    width: 35.3333%;
+    padding-right: 2rem;
+
+    @include mobile-large {
+      width: 50%;
+    }
+
+    @include mobile {
+      width: 100%;
+      max-width: 42rem;
+      margin: 0 auto;
+    }
+  }
+
+  &__socials-wrapper {
+    width: 33%;
+
+    @include mobile-large {
+      width: 50%;
+    }
+
+    @include mobile {
+      width: 100%;
+      max-width: 42rem;
+      margin: 1rem auto 0 auto;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: flex-end;
+
+    @include mobile {
+      justify-content: center;
+    }
+  }
+  
+  &__social {
+    & + & {
+      margin-left: .8rem;
+    }
+  }
+
+  &__social-link {
+    width: 3.6rem;
+    height: 3.6rem;
+    background-color: #2e2e2e;
+    text-align: center;
+    line-height: 3.6rem;
+
+    &:hover {
+
+      #{$root} {
+        &__social-icon {
+          fill: lighten(#d7d7d7, 2%);
+        }
+      }
+    }
+  }
+  
+  &__social-icon {
+    fill: #7d7d7d;
+    vertical-align: middle;
+    transition: fill .2s linear;
+  }
+}

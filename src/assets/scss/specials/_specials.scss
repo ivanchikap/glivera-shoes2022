@@ -1,0 +1,47 @@
+.specials {
+  padding: 2.5rem;
+  background-color: $black;
+
+  &__item {
+    position: relative;
+    width: 100%;
+    height: 18rem;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    img {
+      @extend .img-cover;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 94%;
+    min-width: 18rem;
+    padding: 1.75rem 2.5rem;
+    color: $white;
+    font-family: $aller-light;
+    font-size: 2.5rem;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgba($black, .7);
+    @extend .text-overflow;
+    transition: background-color .1s linear;
+
+    &:hover {
+      background-color: rgba($black, .9);
+    }
+
+    @include tablet {
+      font-size: 2rem;
+      padding: 1rem 1.6rem;
+    }
+  }
+}

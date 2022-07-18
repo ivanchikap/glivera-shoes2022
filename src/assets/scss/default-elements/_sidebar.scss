@@ -1,12 +1,18 @@
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   width: 300px;
-  height: calc(100vh - 4rem);
+  height: calc(100vh - 4.5rem);
   padding: 2rem;
 
   position: absolute;
+  left: 0;
+  top: 4.5rem;
   z-index: 4;
 
-  background-color: #ccc;
+  background-color: $black;
   transform: translateX(-101%);
   transition: transform .3s linear;
 

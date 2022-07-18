@@ -1,0 +1,72 @@
+.blog-card {
+  max-width: 100%;
+  background-color: #dfdbd4;
+  padding: 3.2rem 2rem 3.2rem 1.5rem;
+
+  @include tablet {
+    padding: 2rem 1rem;
+  }
+
+  &__title {
+    font-family: $aller-bold;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    font-size: 1.2rem;
+  }
+
+  &__author {
+    font-family: $aller-italic;
+    margin-top: .6rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    & + & {
+      margin-top: 1.4rem;
+    }
+  }
+
+  &__item-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 3.6rem;
+    height: 3.6rem;
+    margin-right: 0.9rem;
+    line-height: 1;
+    color: $white;
+    font-family: $aller-bold;
+    font-size: 1.3rem;
+    text-align: center;
+    background-color: $aqua;
+  }
+
+  &__item-day {
+    font-size: 1rem;
+  }
+
+  &__item-info {
+    max-width: 84%;
+  }
+
+  &__item-info-name {
+    font-family: $aller-bold;
+    font-size: 1.4rem;
+    @extend .text-overflow;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__item-info-desc {
+    @extend .text-overflow;
+  }
+}
+
