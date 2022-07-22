@@ -19,6 +19,14 @@
         &:last-child {
           box-shadow: none;
         }
+
+        @include mobile-large {
+          padding: 1.4rem 0;
+        }
+
+        @include mobile {
+          padding: 1rem 0;
+        }
       }
     }
   }
@@ -38,6 +46,10 @@
     }
 
     &:hover {
+      color: $aqua;
+    }
+
+    &.active {
       color: $aqua;
     }
   }
