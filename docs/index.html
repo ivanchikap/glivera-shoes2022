@@ -16,58 +16,61 @@
 </head>
 <body class="">
         <!-- Header -->
-        <header class="header">
-            <div class="header__top">
-                <button type="button" class="burger" id="burger">
-                    <span>open navigation</span>
-                </button>
-                <!--/burger-->
-                <div class="container">
-                    <div class="header__top-inner">
-                        <h1 class="logo">
-                            <a class="logo__link" href="#">FooseShoes</a>
-                        </h1>
-                        <div class="header__buttons">
-                            <button class="header__button">
-                                <svg class="header__search-icon" width="14" height="14" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 14 14"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>Search Icon</title><path d="M13.67583,13.69359c-0.39061,0.39042 -1.02347,0.39042 -1.414,0l-2.77743,-2.77743c-0.97749,0.6893 -2.16702,1.09772 -3.4531,1.09772c-3.31358,0 -5.99997,-2.68674 -5.99997,-6.00012c0,-3.31353 2.68639,-6.00012 5.99997,-6.00012c3.31349,0 5.99997,2.6866 5.99997,6.00012c0,1.30465 -0.4209,2.50869 -1.12786,3.49325l2.77243,2.77227c0.3907,0.39084 0.3907,1.0246 0,1.41432zM10.03138,6.01375c0,-2.20911 -1.79101,-4.00003 -4.00009,-4.00003c-2.209,0 -4.00001,1.79092 -4.00001,4.00003c0,2.20911 1.79101,4.00003 4.00001,4.00003c2.20908,0 4.00009,-1.79092 4.00009,-4.00003z" fill-opacity="1"></path></g></g>
-                                </svg>
-                            </button>
-                            <button class="header__button">
-                                <span class="header__button-upper">Login</span>
-                                <span>or</span>
-                                <span class="header__button-upper">register</span>
-                            </button>
+        <header class="header" id="header">
+            <div class="header__top-wrapper" id="headerTopWrapper">
+                <div class="header__top">
+                    <button type="button" class="burger" id="burger">
+                        <span>open navigation</span>
+                    </button>
+                    <!--/burger-->
+                    <div class="container">
+                        <div class="header__top-inner">
+                            <h1 class="logo">
+                                <a class="logo__link" href="#">FooseShoes</a>
+                            </h1>
+                            <div class="header__buttons">
+                                <button class="header__button">
+                                    <svg class="header__search-icon" width="14" height="14" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 14 14"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>Search Icon</title><path d="M13.67583,13.69359c-0.39061,0.39042 -1.02347,0.39042 -1.414,0l-2.77743,-2.77743c-0.97749,0.6893 -2.16702,1.09772 -3.4531,1.09772c-3.31358,0 -5.99997,-2.68674 -5.99997,-6.00012c0,-3.31353 2.68639,-6.00012 5.99997,-6.00012c3.31349,0 5.99997,2.6866 5.99997,6.00012c0,1.30465 -0.4209,2.50869 -1.12786,3.49325l2.77243,2.77227c0.3907,0.39084 0.3907,1.0246 0,1.41432zM10.03138,6.01375c0,-2.20911 -1.79101,-4.00003 -4.00009,-4.00003c-2.209,0 -4.00001,1.79092 -4.00001,4.00003c0,2.20911 1.79101,4.00003 4.00001,4.00003c2.20908,0 4.00009,-1.79092 4.00009,-4.00003z" fill-opacity="1"></path></g></g>
+                                    </svg>
+                                </button>
+                                <button class="header__button">
+                                    <span class="header__button-upper">Login</span>
+                                    <span>or</span>
+                                    <span class="header__button-upper">register</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!--/header__top-->
+                <!--/header__top-->
             
-            <div class="header__menu">
-                <div class="container">
-                    <div class="header__menu-inner">
-                        <nav class="nav">
-                            <a class="nav__item" href="#">Home</a>
-                            <a class="nav__item" href="#">Products</a>
-                            <a class="nav__item" href="#">About</a>
-                            <a class="nav__item" href="#">Pages</a>
-                            <a class="nav__item" href="#">Blog</a>
-                            <a class="nav__item" href="#">Contact</a>
-                        </nav>
-                        <!--/nav-->
-                        <div class="header__actions">
-                            <button class="header__actions-item header__actions-item--favourite">
-                                <span class="header__actions-item-value">30</span>
-                            </button>
-                            <button class="header__actions-item header__actions-item--cart">
-                                <span class="header__actions-item-value">0</span>
-                            </button>
+                <div class="header__menu">
+                    <div class="container">
+                        <div class="header__menu-inner">
+                            <nav class="nav" id="headerNav">
+                                <a class="nav__item active" href="#header">Home</a>
+                                <a class="nav__item" href="#products">Products</a>
+                                <a class="nav__item" href="#about">About</a>
+                                <a class="nav__item" href="#pages">Pages</a>
+                                <a class="nav__item" href="#blog">Blog</a>
+                                <a class="nav__item" href="#contact">Contact</a>
+                            </nav>
+                            <!--/nav-->
+                            <div class="header__actions">
+                                <button class="header__actions-item header__actions-item--favourite">
+                                    <span class="header__actions-item-value">30</span>
+                                </button>
+                                <button class="header__actions-item header__actions-item--cart">
+                                    <span class="header__actions-item-value">0</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
+                    <!--/container-->
                 </div>
-                <!--/container-->
+                <!--/header__menu-->
             </div>
-            <!--/header__menu-->
+            
             
             <div id="tabs" class="tabs">
             
@@ -291,13 +294,13 @@
             
         </header>
         <aside class="sidebar" id="sidebar">
-            <nav class="nav nav--mobile">
-                <a class="nav__item" href="#">Home</a>
-                <a class="nav__item" href="#">Products</a>
-                <a class="nav__item" href="#">About</a>
-                <a class="nav__item" href="#">Pages</a>
-                <a class="nav__item" href="#">Blog</a>
-                <a class="nav__item" href="#">Contact</a>
+            <nav class="nav nav--mobile" id="headerNavSidebar">
+                <a class="nav__item active" href="#header">Home</a>
+                <a class="nav__item" href="#products">Products</a>
+                <a class="nav__item" href="#about">About</a>
+                <a class="nav__item" href="#pages">Pages</a>
+                <a class="nav__item" href="#blog">Blog</a>
+                <a class="nav__item" href="#contact">Contact</a>
             </nav>
             <!--/nav-->
             <div class="header__actions header__actions--mobile">
@@ -320,7 +323,7 @@
         <!-- Main -->
         <main class="main">
             
-            <div class="specials">
+            <div id="about" class="specials">
                 <div class="container">
                     <div class="row">
                         <div class="col-4">
@@ -358,7 +361,7 @@
             </div>
             <!--/specials-->
             
-            <section class="section">
+            <section id="products" class="section">
                 <div class="container">
                     <header class="section__header">
                         <h2 class="section__title">New arrivals on FooseShoes</h2>
@@ -580,7 +583,7 @@
             </section>
             <!--/section-->
             
-            <div class="blog">
+            <div id="blog" class="blog">
                 <div class="container">
                     <div class="row">
                         <div class="col-3">
@@ -721,7 +724,7 @@
                     </div>
                 </div>
                 <!--/pre-footer__top-->
-                <div class="pre-footer__bottom">
+                <div id="contact" class="pre-footer__bottom">
                     <div class="container">
                         <div class="pre-footer__bottom-inner">
                             <div class="pre-footer__form-wrapper">
@@ -785,7 +788,7 @@
                         <p class="footer__copyright-item"> Copyright © Fooseshoes 2013.</p>
                         <p class="footer__copyright-item"> Designed by EnzoLiVolti. </p>
                     </div>
-                    <ul class="breadcrumbs">
+                    <ul class="breadcrumbs" id="pages">
                         <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Home</a></li>
                         <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Support</a></li>
                         <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Terms and Conditions</a></li>
